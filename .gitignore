@@ -1,0 +1,22 @@
+﻿__pycache__/
+*.py[cod]
+venv/
+.venv/
+env/
+.env
+.idea/
+.vscode/
+.DS_Store
+
+# Node dependencies
+node_modules/
+
+# Logs
+*.log
+
+# Local databases
+*.db
+
+# Python environments
+venv/
+.venv/

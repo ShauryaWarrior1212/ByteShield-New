@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0a0a0a;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.game-container {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#gameArea {
+    width: 100%;
+    height: 400px;
+    background-color: #111;
+    position: relative;
+    border: 2px solid #00ffff;
+    overflow: hidden;
+}
+
+#player {
+    width: 50px;
+    height: 50px;
+    background-color: #00ffff;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+
+.threat {
+    width: 30px;
+    height: 30px;
+    background-color: #ff0000;
+    position: absolute;
+    top: -30px;
+    border-radius: 50%;
+}
+
+#score {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+#startBtn {
+    padding: 10px 20px;
+    background-color: #00ffff;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* Back Button Styles */
+.back-button {
+    position: fixed; /* Fixed positioning to keep it in place */
+    top: 10px; /* Adjust the distance from the top */
+    left: 10px; /* Adjust the distance from the left */
+    display: flex;
+    align-items: center;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 24px;
+    transition: color 0.3s;
+    z-index: 1000; /* Ensures the button is on top of other elements */
+}
+
+.back-button ion-icon {
+    font-size: 24px;
+}
+
+.back-button:hover {
+    color: #0056b3;
+}
+
+/* Control Buttons */
+.controls {
+    display: none; /* Initially hidden */
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+
+.control-btn {
+    background-color: #00ffff;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    color: #000;
+    cursor: pointer;
+    font-size: 18px;
+    position: relative;
+    width: 80px; /* Adjusted for a larger button */
+    height: 80px; /* Adjusted for a larger button */
+}
+
+.control-btn .icon {
+    display: block;
+    font-size: 30px;
+}
+
+.control-btn .label {
+    display: block;
+    font-size: 14px;
+}
+
+/* Button appearance for active state */
+.control-btn:active {
+    background-color: #007bff;
+    color: #fff;
+}
