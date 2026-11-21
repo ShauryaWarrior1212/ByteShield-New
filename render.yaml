@@ -1,6 +1,7 @@
 services:
   - type: web
-    name: my-python-backend
-    runtime: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app:app
+    name: byteshield
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
