@@ -15,7 +15,7 @@ import base64
 from logging.handlers import RotatingFileHandler
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'  # For flashing messages
+app.secret_key = os.environ.get('SECRET_KEY')
 # VirusTotal API URL and API key
 API_URL = 'https://www.virustotal.com/api/v3/urls'
 API_KEY = '0e2137eaa2a2395599cf8a67f5ed8fe2503bf60d81085b412d4df15b6968e6df'
