@@ -18,7 +18,7 @@ app = Flask(__name__)
 app.secret_key = os.environ.get('SECRET_KEY')
 # VirusTotal API URL and API key
 API_URL = 'https://www.virustotal.com/api/v3/urls'
-API_KEY = '0e2137eaa2a2395599cf8a67f5ed8fe2503bf60d81085b412d4df15b6968e6df'
+API_KEY = os.environ.get('VIRUSTOTAL_API_KEY')
 
 # Set up logging
 logging.basicConfig(level=logging.DEBUG)
