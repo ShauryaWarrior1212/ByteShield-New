@@ -1,7 +1,4 @@
-﻿Flask
+Flask
 flask-login
-werkzeug
+Werkzeug
 gunicorn==20.1.0
-requests
-flask_wtf
-python-nmap
