@@ -12,7 +12,6 @@ import socket
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime
 import base64
-from logging.handlers import RotatingFileHandler
 
 app = Flask(__name__)
 app.secret_key = os.environ.get('SECRET_KEY')
@@ -264,7 +263,7 @@ def get_attack_data():
     return jsonify(attack_data)
 
 # Set up logging
-handler = RotatingFileHandler('app.log', maxBytes=10000, backupCount=1)
+handler = logging.StreamHandler()
 handler.setLevel(logging.ERROR)
 formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
 handler.setFormatter(formatter)
